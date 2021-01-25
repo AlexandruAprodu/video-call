@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Video Room</title>
+  <link rel="stylesheet" href="{% static 'video/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'video/css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'video/css/buttons.css' %}">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'video/img/favicon.png' %}">
+</head>
+<body>
+
+
+  <div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Congratulations!</strong><span> You can invite others join this channel by click </span><a href="" target="_blank">here</a>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div id="success-alert-with-token" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Congratulations!</strong><span> Joined room successfully. </span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div id="success-alert-with-token" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Congratulations!</strong><span> Joined room successfully. </span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  
+  <div class="container">
+    <h1 class="title"> - Welcome to free video-audio room - </h1>
+    <form id="join-form">
+      <div class="row join-info-group">
+          <div class="col-sm">
+            <input id="appid" type="hidden" placeholder="enter appid" required value="{{ Keys.AppId }}">
+          </div>
+          <div class="col-sm">
+<!--            <input id="token" type="text" placeholder="enter token">-->
+            <input id="token" type="hidden" value="{{ token }}">
+          </div>
+          <div class="col-sm">
+            <input id="channel" type="hidden" placeholder="enter channel name" required value="{{ Keys.Channel }}">
+          </div>
+      </div>
+      <div class="button-group">
+<!--        <button id="join" type="submit" class="btn btn-primary btn-sm">Join</button>-->
+<!--        <button id="leave" type="button" class="btn btn-primary btn-sm" disabled>Leave</button>-->
+      </div>
+
+      <div class="container">
+
+          <div class="center">
+            <button id="join" type="submit" class="btn">Join</button>
+            <button id="leave" type="button" class="btn" disabled>Leave</button>
+          </div>
+      </div>
+    </form>
+    <div class="video-group">
+
+      <div class="col">
+        <p id="local-player-name" class="player-name"></p>
+        <div id="local-player" class="player"></div>
+        <div id="remote-playerlist"></div>
+      </div>
+
+<!--      <div class="w-100"></div>-->
+<!--      <div class="col">-->
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'video/js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'video/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'video/js/AgoraRTC_N-4.2.1.js' %}"></script>
+  <script src="{% static 'video/js/index.js' %}"></script>
+</body>
+</html>

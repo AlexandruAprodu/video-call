@@ -1,0 +1,54 @@
+
+#join-form {
+  margin-top: 10px;
+}
+
+.player {
+  width: 480px;
+  height: 320px;
+}
+
+.player-name {
+  margin: 8px 0;
+}
+
+#success-alert, #success-alert-with-token {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .player {
+    width: 320px;
+    height: 240px;
+  }
+}
+
+.video-group {
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#remote-playerlist {
+  display: flex;
+
+}
+
+#local-player {
+  display: flex;
+
+}
+
+.title{
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center;
+
+}

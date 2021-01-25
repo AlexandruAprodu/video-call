@@ -95,7 +95,7 @@ async function leave() {
   await client.leave();
 
   $("#local-player-name").text("");
-  $("#join").attr("disabled", dfalse);
+  $("#join").attr("disabled", false);
   $("#leave").attr("disabled", true);
   console.log("client leaves channel success");
 }

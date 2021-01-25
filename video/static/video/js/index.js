@@ -44,6 +44,7 @@ $("#join-form").submit(async function (e) {
     }
   } catch (error) {
     console.error(error);
+    $('#debug').append('<p>' + error + '</p>');
   } finally {
     $("#leave").attr("disabled", false);
   }
